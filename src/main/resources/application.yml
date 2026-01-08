@@ -1,0 +1,31 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://payment_user:payment_password@localhost:27017/payment_system
+      auto-index-creation: true
+
+  security:
+    user:
+      name: user
+      password: password
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.paymentsystem: DEBUG
+    org.springframework.data.mongodb.core: INFO
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
